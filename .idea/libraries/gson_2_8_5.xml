@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="gson-2.8.5">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/out/artifacts/JinTianFindHouse_Web_exploded/WEB-INF/lib/gson-2.8.5.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+    <jarDirectory url="jar://$PROJECT_DIR$/out/artifacts/JinTianFindHouse_Web_exploded/WEB-INF/lib/gson-2.8.5.jar!/" recursive="false" />
+  </library>
+</component>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="JinTianFindHouse"
+  id="myeclipse.1569220017603"
+  context-root="/JinTianFindHouse"
+  j2ee-spec="6.0"
+  archive="JinTianFindHouse.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+
