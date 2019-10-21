@@ -9,8 +9,5 @@
         <module name="JinTianFindHouse" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="JinTianFindHouse" target="1.7" />
-    </bytecodeTargetLevel>
   </component>
 </project>

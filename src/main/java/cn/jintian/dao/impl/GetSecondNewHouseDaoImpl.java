@@ -3,10 +3,13 @@ package cn.jintian.dao.impl;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
-import cn.jintian.dao.BaseDao;
 import cn.jintian.dao.ISecondNewHouseDao;
+import cn.jintian.dao.BaseDao;
 import cn.jintian.pojo.SecondNew_h;
+import cn.jintian.util.SecondHouse;
 
 public class GetSecondNewHouseDaoImpl implements ISecondNewHouseDao {
 	@Override
@@ -14,8 +17,8 @@ public class GetSecondNewHouseDaoImpl implements ISecondNewHouseDao {
 		ResultSet rs = null;
 		PreparedStatement pstat = null;
 		SecondNew_h SecondHouse = null;
-		try {
-			String sql = "select new_h_id,h_house_id,new_h_newname,new_h_status,region_value,street_value,community_name,new_h_totalprice,h_tower,new_h_area,i_imageurl,new_h_price,h_structure,h_heatsystem,h_yearproperty,oriented_value,area_value,roomtype_value,propertype_value,new_h_hall,floor_value,decoration_value,h_tier,h_flat,b_borkername,b_position,company_name,b_borkeriphone,d_date,po_value,mortgagetype_value,p_havepremit,feedback_time,hchara_characteristic,hchara_sellpoint,hchara_introduced,hchara_traffic,hchara_communityinfo,hchara_housetype from houseinfo LEFT JOIN housecharacteristic ON houseinfo.h_house_id = housecharacteristic.hchara_house_id LEFT JOIN feedback ON houseinfo.h_house_id = feedback.feedback_id LEFT JOIN old_h ON houseinfo.h_house_id = old_h.old_h_id LEFT JOIN dealsuccess ON old_h.old_h_id = dealsuccess.d_dealid LEFT JOIN propertyownership ON old_h.old_h_ownership = propertyownership.po_id LEFT JOIN mortgagetype ON old_h.old_h_mortgageInfor = mortgagetype.mortgagetype_id LEFT JOIN permit ON old_h.old_h_roomrpareprarts = permit.p_premit_id LEFT JOIN borkerinfo ON houseinfo.h_broker_id = borkerinfo.b_borkerid LEFT JOIN housecompany ON borkerinfo.b_companyid = housecompany.company_id LEFT JOIN floor ON houseinfo.h_house_id =floor.floor_id LEFT JOIN decoration ON houseinfo.h_house_id =decoration.decoration_id LEFT JOIN propertype ON houseinfo.h_house_id = propertype.propertype_id LEFT JOIN new_h ON houseinfo.h_house_id = new_h.new_h_id LEFT JOIN region on houseinfo.h_area_id = region.region_id LEFT JOIN street on houseinfo.h_area_id = street.street_id LEFT JOIN oriented on houseinfo.h_house_id = oriented.oriented_id LEFT JOIN area on houseinfo.h_area_id = area.area_id LEFT JOIN roomtype on houseinfo.h_house_id = roomtype.roomtype_id LEFT JOIN images ON houseinfo.h_house_id = images.i_image_id LEFT JOIN community ON houseinfo.h_house_id = community.community_id WHERE houseinfo.h_house_id=?";
+        try {
+			String sql = "select new_h_id,h_house_id,new_h_newname,i_ph1,i_ph2,i_ph3,i_ph4,i_ph5,i_ph6,new_h_status,region_value,street_value,community_name,new_h_totalprice,h_tower,new_h_area,i_imageurl,new_h_price,h_structure,h_heatsystem,h_yearproperty,oriented_value,area_value,roomtype_value,propertype_value,new_h_hall,floor_value,decoration_value,h_tier,h_flat,b_borkername,b_position,company_name,b_borkeriphone,d_date,po_value,mortgagetype_value,p_havepremit,feedback_time,hchara_characteristic,hchara_sellpoint,hchara_introduced,hchara_traffic,hchara_communityinfo,hchara_housetype from houseinfo LEFT JOIN housecharacteristic ON houseinfo.h_house_id = housecharacteristic.hchara_house_id LEFT JOIN feedback ON houseinfo.h_house_id = feedback.feedback_id LEFT JOIN old_h ON houseinfo.h_house_id = old_h.old_h_id LEFT JOIN dealsuccess ON old_h.old_h_id = dealsuccess.d_dealid LEFT JOIN propertyownership ON old_h.old_h_ownership = propertyownership.po_id LEFT JOIN mortgagetype ON old_h.old_h_mortgageInfor = mortgagetype.mortgagetype_id LEFT JOIN permit ON old_h.old_h_roomrpareprarts = permit.p_premit_id LEFT JOIN borkerinfo ON houseinfo.h_broker_id = borkerinfo.b_borkerid LEFT JOIN housecompany ON borkerinfo.b_companyid = housecompany.company_id LEFT JOIN floor ON houseinfo.h_house_id =floor.floor_id LEFT JOIN decoration ON houseinfo.h_house_id =decoration.decoration_id LEFT JOIN propertype ON houseinfo.h_house_id = propertype.propertype_id LEFT JOIN new_h ON houseinfo.h_house_id = new_h.new_h_id LEFT JOIN region on houseinfo.h_area_id = region.region_id LEFT JOIN street on houseinfo.h_area_id = street.street_id LEFT JOIN oriented on houseinfo.h_house_id = oriented.oriented_id LEFT JOIN area on houseinfo.h_area_id = area.area_id LEFT JOIN roomtype on houseinfo.h_house_id = roomtype.roomtype_id LEFT JOIN images ON new_h_id = images.i_house_id LEFT JOIN community ON houseinfo.h_house_id = community.community_id WHERE houseinfo.h_house_id=?";
 			 pstat = BaseDao.getConn().prepareStatement(sql);
 			 pstat.setInt(1, newhouseid);
 			 rs = pstat.executeQuery();
@@ -60,7 +63,12 @@ public class GetSecondNewHouseDaoImpl implements ISecondNewHouseDao {
 				SecondHouse.setHchara_introduced(rs.getString("hchara_introduced"));
 				SecondHouse.setHchara_sellpoint(rs.getString("hchara_sellpoint"));
 				SecondHouse.setHchara_traffic(rs.getString("hchara_traffic"));
-				
+				SecondHouse.setI_ph1(rs.getString("i_ph1"));
+				SecondHouse.setI_ph2(rs.getString("i_ph2"));
+				SecondHouse.setI_ph3(rs.getString("i_ph3"));
+				SecondHouse.setI_ph4(rs.getString("i_ph4"));
+				SecondHouse.setI_ph5(rs.getString("i_ph5"));
+				SecondHouse.setI_ph6(rs.getString("i_ph6"));
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();

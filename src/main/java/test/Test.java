@@ -1,5 +1,6 @@
 package test;
 
+import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
@@ -10,6 +11,7 @@ import cn.jintian.dao.impl.GetSecondNewHouseDaoImpl;
 import cn.jintian.pojo.New_h;
 import cn.jintian.pojo.Old_H;
 import cn.jintian.pojo.SecondNew_h;
+import cn.jintian.service.impl.SecondNewHouseServiceImpl;
 import cn.jintian.util.SMSUtil;
 
 
@@ -18,7 +20,7 @@ public class Test {
 		
 		/*FollowHouseDaoImpl fhdi = new FollowHouseDaoImpl();
 		List<Old_H> oldHourse = fhdi.getOldHourse(1, 3,"4");
-		System.out.println("ÕâÏÂÃæÊÇ4ºÅÓÃ»§Ï²»¶µÄ·¿Ô´ID");
+		System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½4ï¿½ï¿½ï¿½Ã»ï¿½Ï²ï¿½ï¿½ï¿½Ä·ï¿½Ô´ID");
 		for (Old_H o : oldHourse) {
 			System.out.println(o.getOld_h_id());
 			System.out.println(o.getCommunityName());
@@ -34,11 +36,12 @@ public class Test {
 		}
 		int sendCode = SMSUtil.SendCode("19935150512");
 		System.out.println(sendCode);*/
+		/*GetSecondNewHouseDaoImpl getSecondNewHouseDao = new GetSecondNewHouseDaoImpl();
+		ArrayList<SecondNew_h> house = getSecondNewHouseDao.getSecondNewHouse(1);
+		for (SecondNew_h secondNew_h : house) {
+			System.out.println(secondNew_h.getNew_h_id());
+			System.out.println(secondNew_h.getCommunity_name());
+		}*/
 		
-		/*GetSecondNewHouseDaoImpl gs = new GetSecondNewHouseDaoImpl();
-		SecondNew_h sn = gs.getSecondNewHouse(2);
-		System.out.println(sn.getNew_h_id());*/
-		BaseDao.getConn();
-		System.out.println(1);
 	}
 }

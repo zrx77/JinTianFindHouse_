@@ -1,7 +1,7 @@
 package cn.jintian.pojo;
 /**
  * 
- * @author уехСом
+ * @author О©╫О©╫О©╫О©╫О©╫О©╫
  *
  */
 public class Users {

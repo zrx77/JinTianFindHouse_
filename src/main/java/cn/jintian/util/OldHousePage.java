@@ -6,37 +6,46 @@ import java.util.List;
 import cn.jintian.pojo.Old_H;
 
 public class OldHousePage {
-	private Integer hourseTotal;//±íÀïµÄ×ÜÊý
-	private Integer index;//µ±Ç°Ò³
-	private Integer totalPages;//×ÜÒ³Êý
-	private Integer itemsPerPage;//Ã¿Ò³ÏÔÊ¾µÄÌõÄ¿Êý
-	private List<Old_H> hourse = new ArrayList<Old_H>();
-	public Integer getHourseTotal() {
-		return hourseTotal;
-	}
-	public void setHourseTotal(Integer hourseTotal) {
-		this.hourseTotal = hourseTotal;
-	}
-	public Integer getIndex() {
-		return index;
-	}
-	public void setIndex(Integer index) {
-		this.index = index;
-	}
-	public Integer getTotalPages() {
-		return hourseTotal % itemsPerPage == 0 ? hourseTotal / itemsPerPage : hourseTotal / itemsPerPage + 1;
-	}
-	public Integer getItemsPerPage() {
-		return itemsPerPage;
-	}
-	public void setItemsPerPage(Integer itemsPerPage) {
-		this.itemsPerPage = itemsPerPage;
-	}
-	public List<Old_H> getHourse() {
-		return hourse;
-	}
-	public void setHourse(List<Old_H> hourse) {
-		this.hourse = hourse;
-	}
-	
+    private Integer hourseTotal;//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+    private Integer index;//ï¿½ï¿½Ç°Ò³
+    private Integer totalPages;//ï¿½ï¿½Ò³ï¿½ï¿½
+    private Integer itemsPerPage;//Ã¿Ò³ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½Ä¿ï¿½ï¿½
+    private List<Old_H> hourse = new ArrayList<Old_H>();
+
+    public Integer getHourseTotal() {
+        return hourseTotal;
+    }
+
+    public void setHourseTotal(Integer hourseTotal) {
+        this.hourseTotal = hourseTotal;
+    }
+
+    public Integer getIndex() {
+        return index;
+    }
+
+    public void setIndex(Integer index) {
+        this.index = index;
+    }
+
+    public Integer getTotalPages() {
+        return hourseTotal % itemsPerPage == 0 ? hourseTotal / itemsPerPage : hourseTotal / itemsPerPage + 1;
+    }
+
+    public Integer getItemsPerPage() {
+        return itemsPerPage;
+    }
+
+    public void setItemsPerPage(Integer itemsPerPage) {
+        this.itemsPerPage = itemsPerPage;
+    }
+
+    public List<Old_H> getHourse() {
+        return hourse;
+    }
+
+    public void setHourse(List<Old_H> hourse) {
+        this.hourse = hourse;
+    }
+
 }

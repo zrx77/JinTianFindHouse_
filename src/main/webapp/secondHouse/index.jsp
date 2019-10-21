@@ -1,5 +1,5 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
-<%@ taglib uri="http://java.sun.com/jstl/core" prefix="c" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
@@ -161,7 +161,7 @@ var _hmt = _hmt || [];
                                     <span class="worth_position"></span>
                                 <div class="title">
                     <h1 class="main" title="洋房两室 简单装修 采光好 看房有钥匙">
-                        洋房两室 简单装修 采光好 看房有钥匙
+                        ${secondNewHouse.community_name}
                                                                                                 </h1>
                     <div class="sub">
                                                     洋房 两室 简单 装修  采光 好
@@ -196,17 +196,17 @@ var _hmt = _hmt || [];
                	<span class="stp">&nbsp;&gt;&nbsp;</span>
                 <a href="/ershoufang/">天津</a>
                 <span class="stp">&nbsp;&gt;&nbsp;</span>
-                 <a href="/ershoufang/xiqing/">西青</a>
+                 <a href="/ershoufang/xiqing/">${secondNewHouse.region_value }</a>
                  <span class="stp">&nbsp;&gt;&nbsp;</span>
-                 <a href="/ershoufang/zhongbeizhen/">中北镇</a>
+                 <a href="/ershoufang/zhongbeizhen/">${secondNewHouse.street_value }</a>
                  <span class="stp">&nbsp;&gt;&nbsp;</span>
-                 <a href="/ershoufang/c1211045113868/">溪秀苑翠溪园</a>
+                 <a href="/ershoufang/c1211045113868/">${secondNewHouse.community_name}</a>
                  </div>
         </div>
     </div>
 </div>
 
-                          
+
 
 <div data-component="fixedTabs" class="fixedContent">
   <div class="fixedTabs">
@@ -226,7 +226,8 @@ var _hmt = _hmt || [];
   <div class="overview">
     <div class="img" id="topImg">
       <div class="imgContainer">
-        <img class="new-default-icon maxWidth" src="${secondNewHouse.i_imageurl }" alt="洋房两室 简单装修 采光好 看房有钥匙-天津溪秀苑翠溪园二手房" title="溪秀苑翠溪园">
+
+        <img class="new-default-icon maxWidth" src="${secondNewHouse.i_ph1 }" alt="洋房两室 简单装修 采光好 看房有钥匙-天津溪秀苑翠溪园二手房" title="溪秀苑翠溪园">
         <span></span>
                       <div class="vr_animation_logo"></div>
                 </div>
@@ -234,31 +235,31 @@ var _hmt = _hmt || [];
         <div class="pre"><</div>
 	        <ul class="smallpic">
 	        	<li data-src="https://vrlab-image.ljcdn.com/release/auto3dhd/995acd78291d7fa693caefc887bb297a/screenshot/1546478388_6/pc0_oPGC9aRGj.jpg.q_70.jpg" data-size="1420x800" data-vr="https://realsee.com/ke/ZBgxP9kN5GyMRNnl/6eJgy4Aujh6joAdD74edTbTgp3AuvL10/#lianjia">
-	                    <img src="${secondNewHouse.i_imageurl }"  alt="洋房两室 简单装修 采光好 看房有钥匙" title="溪秀苑翠溪园户型图实景图">
+	                    <img src="${secondNewHouse.i_ph1 }"  alt="洋房两室 简单装修 采光好 看房有钥匙" title="溪秀苑翠溪园户型图实景图">
 	            </li>
 	            <li data-src="https://ke-image.ljcdn.com/120000-inspection/prod-d34822b8-6a2e-43ca-8817-e84b4251043a.jpg!m_fill,w_710,h_400,lg_north_west,lx_0,ly_0,l_fbk,f_jpg,ls_50?from=ke.com" data-uri="https://ke-image.ljcdn.com/120000-inspection/prod-d34822b8-6a2e-43ca-8817-e84b4251043a.jpg" data-size="1420x800"
 	                 data-desc="客厅" data-pic="https://ke-image.ljcdn.com/120000-inspection/prod-d34822b8-6a2e-43ca-8817-e84b4251043a.jpg!m_fill,w_1000,h_750,lg_north_west,lx_0,ly_0,l_fbk,f_jpg,ls_50?from=ke.com">
-	            <img src="statics/images/shouse1.jpg!m_fill,w_235,h_178,l_fbk"  alt="洋房两室 简单装修 采光好 看房有钥匙" title="溪秀苑翠溪园户型图实景图">
+	            <img src="${secondNewHouse.i_ph2 }"  alt="洋房两室 简单装修 采光好 看房有钥匙" title="溪秀苑翠溪园户型图实景图">
 	            </li>
 	            <li data-src="https://ke-image.ljcdn.com/hdic-frame/prod-42dfdadd-a4c4-4e25-9374-13e69005bf3b.png!m_fill,w_710,h_400,l_bk,f_jpg,ls_50?from=ke.com" data-uri="https://ke-image.ljcdn.com/hdic-frame/prod-42dfdadd-a4c4-4e25-9374-13e69005bf3b.png" data-size="1066x800"
 	                 data-desc="户型图" data-pic="https://ke-image.ljcdn.com/hdic-frame/prod-42dfdadd-a4c4-4e25-9374-13e69005bf3b.png!m_fill,w_1000,h_750,l_bk,f_jpg,ls_50?from=ke.com">
-	            <img src="statics/images/shouse2.jpg!m_fill,w_235,h_178,l_fbk"  alt="洋房两室 简单装修 采光好 看房有钥匙" title="溪秀苑翠溪园户型图实景图">
+	            <img src="${secondNewHouse.i_ph3 }"  alt="洋房两室 简单装修 采光好 看房有钥匙" title="溪秀苑翠溪园户型图实景图">
 	            </li>
 	            <li data-src="https://ke-image.ljcdn.com/120000-inspection/prod-5dff607a-3aab-49c6-80b0-074dd776d9ba.jpg!m_fill,w_710,h_400,lg_north_west,lx_0,ly_0,l_fbk,f_jpg,ls_50?from=ke.com" data-uri="https://ke-image.ljcdn.com/120000-inspection/prod-5dff607a-3aab-49c6-80b0-074dd776d9ba.jpg" data-size="1420x800"
 	                data-desc="卧室B" data-pic="https://ke-image.ljcdn.com/120000-inspection/prod-5dff607a-3aab-49c6-80b0-074dd776d9ba.jpg!m_fill,w_1000,h_750,lg_north_west,lx_0,ly_0,l_fbk,f_jpg,ls_50?from=ke.com">
-	            <img src="statics/images/shouse3.jpg!m_fill,w_235,h_178,l_fbk"  alt="洋房两室 简单装修 采光好 看房有钥匙" title="溪秀苑翠溪园户型图实景图">
+	            <img src="${secondNewHouse.i_ph4 }"  alt="洋房两室 简单装修 采光好 看房有钥匙" title="溪秀苑翠溪园户型图实景图">
 	            </li>
 	             <li data-src="https://ke-image.ljcdn.com/120000-inspection/prod-3864efad-3432-4505-9e82-862ec2f56811.jpg!m_fill,w_710,h_400,lg_north_west,lx_0,ly_0,l_fbk,f_jpg,ls_50?from=ke.com" data-uri="https://ke-image.ljcdn.com/120000-inspection/prod-3864efad-3432-4505-9e82-862ec2f56811.jpg" data-size="1420x800"
 	                 data-desc="卧室A" data-pic="https://ke-image.ljcdn.com/120000-inspection/prod-3864efad-3432-4505-9e82-862ec2f56811.jpg!m_fill,w_1000,h_750,lg_north_west,lx_0,ly_0,l_fbk,f_jpg,ls_50?from=ke.com">
-	             <img src="statics/images/shouse4.jpg!m_fill,w_235,h_178,l_fbk"  alt="洋房两室 简单装修 采光好 看房有钥匙" title="溪秀苑翠溪园户型图实景图">
+	             <img src="${secondNewHouse.i_ph5 }"  alt="洋房两室 简单装修 采光好 看房有钥匙" title="溪秀苑翠溪园户型图实景图">
 	             </li>
 	             <li data-src="https://ke-image.ljcdn.com/120000-inspection/prod-a94ebf66-f845-49a4-a30b-890f79ee0c9b.jpg!m_fill,w_710,h_400,lg_north_west,lx_0,ly_0,l_fbk,f_jpg,ls_50?from=ke.com" data-uri="https://ke-image.ljcdn.com/120000-inspection/prod-a94ebf66-f845-49a4-a30b-890f79ee0c9b.jpg" data-size="1420x800"
 	                  data-desc="卫生间" data-pic="https://ke-image.ljcdn.com/120000-inspection/prod-a94ebf66-f845-49a4-a30b-890f79ee0c9b.jpg!m_fill,w_1000,h_750,lg_north_west,lx_0,ly_0,l_fbk,f_jpg,ls_50?from=ke.com">
-	             <img src="statics/images/shouse5.jpg!m_fill,w_235,h_178,l_fbk"  alt="洋房两室 简单装修 采光好 看房有钥匙" title="溪秀苑翠溪园户型图实景图">
+	             <img src="${secondNewHouse.i_ph6 }"  alt="洋房两室 简单装修 采光好 看房有钥匙" title="溪秀苑翠溪园户型图实景图">
 	             </li>
 	             <li data-src="https://ke-image.ljcdn.com/120000-inspection/prod-444c20c9-3fd7-4334-82b6-a24ff3ed41eb.jpg!m_fill,w_710,h_400,lg_north_west,lx_0,ly_0,l_fbk,f_jpg,ls_50?from=ke.com" data-uri="https://ke-image.ljcdn.com/120000-inspection/prod-444c20c9-3fd7-4334-82b6-a24ff3ed41eb.jpg" data-size="1420x800"
 	                      data-desc="厨房" data-pic="https://ke-image.ljcdn.com/120000-inspection/prod-444c20c9-3fd7-4334-82b6-a24ff3ed41eb.jpg!m_fill,w_1000,h_750,lg_north_west,lx_0,ly_0,l_fbk,f_jpg,ls_50?from=ke.com">
-	             <img src="statics/images/shouse6.jpg!m_fill,w_235,h_178,l_fbk"  alt="洋房两室 简单装修 采光好 看房有钥匙" title="溪秀苑翠溪园户型图实景图">
+	             <img src="${secondNewHouse.i_ph1 }"  alt="洋房两室 简单装修 采光好 看房有钥匙" title="溪秀苑翠溪园户型图实景图">
 	              </li>
 	         </ul>
         <div class="next">></div>
@@ -331,7 +332,7 @@ var _hmt = _hmt || [];
         <div class="areaName">
           <span class="label">所在区域</span>
           <span class="info">
-                          <a href="/ershoufang/xiqing/" target="_blank">${secondNewHouse.oriented_value }</a>
+                          <a href="/ershoufang/xiqing/" target="_blank">${secondNewHouse.region_value }</a>
             &nbsp;
             <a href="/ershoufang/zhongbeizhen/" target="_blank">${secondNewHouse.street_value }</a>&nbsp;
             
@@ -493,7 +494,7 @@ var _hmt = _hmt || [];
             data-house-code="101103910272"
             data-resblock-id="1211045113868"
                         data-ucid="1000000023111111">
-              
+
           </div>
 
           <div class="content">
@@ -619,16 +620,6 @@ var _hmt = _hmt || [];
       </div>
     </div>
   </div>
-      <!-- 热门问题 -->
-      <div class="newwrap" data-component="houseAsk">
-    <div class="content-wrapper">
-        <h3>
-            <div class="title">热门问题</div>
-        </h3>
-        <div class="hotList container VIEWDATA" data-view-evtid="11821" data-view-event="ModuleExpo"
-             data-action="source_type=房源详情页问答模块曝光&housedel_id=19010411410100107743"></div>
-    </div>
-</div>
       <!-- 房源照片 -->
         <div data-component="housePhotos">
     <div class="newwrap" id="housePic">
@@ -639,27 +630,27 @@ var _hmt = _hmt || [];
         <div class="container">
           <div class="list">
                           <div data-index="0">
-                <img src="statics/images/shouse10.jpg!m_fill,w_235,h_178,l_fbk" alt="洋房两室 简单装修 采光好 看房有钥匙-客厅">
+                <img src="statics/images/shouse10.jpg" alt="洋房两室 简单装修 采光好 看房有钥匙-客厅">
                 <span class="name">客厅</span>
               </div>
                           <div data-index="1">
-                <img src="statics/images/shouse9.jpg!m_fill,w_235,h_178,l_fbk" alt="洋房两室 简单装修 采光好 看房有钥匙-户型图">
+                <img src="statics/images/shouse9.jpg" alt="洋房两室 简单装修 采光好 看房有钥匙-户型图">
                 <span class="name">户型图</span>
               </div>
                           <div data-index="2">
-                <img src="statics/images/shouse6.jpg!m_fill,w_235,h_178,l_fbk" alt="洋房两室 简单装修 采光好 看房有钥匙-卧室B">
+                <img src="statics/images/shouse6.jpg" alt="洋房两室 简单装修 采光好 看房有钥匙-卧室B">
                 <span class="name">卧室B</span>
               </div>
                           <div data-index="3">
-                <img src="statics/images/shouse4.jpg!m_fill,w_235,h_178,l_fbk" alt="洋房两室 简单装修 采光好 看房有钥匙-卧室A">
+                <img src="statics/images/shouse4.jpg" alt="洋房两室 简单装修 采光好 看房有钥匙-卧室A">
                 <span class="name">卧室A</span>
               </div>
                           <div data-index="4">
-                <img src="statics/images/shouse11.jpg!m_fill,w_235,h_178,l_fbk" alt="洋房两室 简单装修 采光好 看房有钥匙-卫生间">
+                <img src="statics/images/shouse11.jpg" alt="洋房两室 简单装修 采光好 看房有钥匙-卫生间">
                 <span class="name">卫生间</span>
               </div>
                           <div data-index="5">
-                <img src="statics/images/shouse8.jpg!m_fill,w_235,h_178,l_fbk" alt="洋房两室 简单装修 采光好 看房有钥匙-厨房">
+                <img src="statics/images/shouse8.jpg" alt="洋房两室 简单装修 采光好 看房有钥匙-厨房">
                 <span class="name">厨房</span>
               </div>
                         <!-- <div>
@@ -687,7 +678,7 @@ var _hmt = _hmt || [];
         <div class="desc"></div>
         <ul>
                       <li data-src="statics/images/shouse4.jpg!m_fill,w_235,h_178,l_fbk" data-desc="客厅 1/6" data-pic="statics/images/shouse4.jpg!m_fill,w_235,h_178,l_fbk">
-              <img src="statics/images/shouse4.jpg!m_fill,w_235,h_178,l_fbk" alt="">
+              <img src="statics/images/shouse4.jpg" alt="">
             </li>
                       <li data-src="https://ke-image.ljcdn.com/hdic-frame/prod-42dfdadd-a4c4-4e25-9374-13e69005bf3b.png!m_fill,w_710,h_400,l_bk,f_jpg,ls_50?from=ke.com" data-uri="https://ke-image.ljcdn.com/hdic-frame/prod-42dfdadd-a4c4-4e25-9374-13e69005bf3b.png" data-desc="户型图 2/6" data-pic="https://ke-image.ljcdn.com/hdic-frame/prod-42dfdadd-a4c4-4e25-9374-13e69005bf3b.png!m_fill,w_1000,h_750,l_bk,f_jpg,ls_50?from=ke.com">
               <img src="statics/images/prod-42dfdadd-a4c4-4e25-9374-13e69005bf3b.png!m_fill,w_710,h_400,l_bk,f_jpg,ls_50" alt="">
@@ -770,7 +761,7 @@ var _hmt = _hmt || [];
           </div>
         </div>
         <a href="https://tj.ke.com/xiaoqu/1211045113868/" class="xiaoqu_img fr" data-lj_dianji="10023">
-                      <img src="statics/images/shouse1.jpg!m_fill,w_235,h_178,l_fbk" alt="溪秀苑翠溪园">
+                      <img src="${secondNewHouse.i_imageurl }" alt="溪秀苑翠溪园">
                   </a>
       </div>
     </div>
@@ -986,7 +977,7 @@ var _hmt = _hmt || [];
                                 条例，举报通过后会对举报者进行现金奖励，请注意接收相关消息
                             </a>
                         </div>
-                        
+
                         <div class="img_box">
                             <label class="item-tit">上传凭证</label>
                             <div class="input-img">
@@ -1006,7 +997,7 @@ var _hmt = _hmt || [];
             </form>
             <div class="wyjbconfrm jiudin CLICKDATA"
             id="reportBtn"
-            data-click-evtid="11449" 
+            data-click-evtid="11449"
             data-click-event="WebClick"
             data-action="source_type=详情页_举报入口_点击提交&housedel_id=19010411410100107743&housedel_source=30201">
                 举报

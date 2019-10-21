@@ -427,7 +427,7 @@ INSERT INTO `images` VALUES ('5', '5', '5', 'fimg2001');
 INSERT INTO `images` VALUES ('6', '6', '6', 'eimg02');
 INSERT INTO `images` VALUES ('7', '1', '2', 'loupan/statics/images/ximg2.jpg');
 INSERT INTO `images` VALUES ('8', '2', '3', 'loupan/statics/images/ximg1.jpg');
-INSERT INTO `images` VALUES ('9', '1', '2', 'statics/images/pc0_opgc9argj.jpg.q_70.jpg');
+INSERT INTO `images` VALUES ('9', '1', '2', 'statics/images/pc0.jpg');
 INSERT INTO `images` VALUES ('10', '1', '1', 'loupan/statics/images/ximg1.jpg');
 INSERT INTO `images` VALUES ('11', '2', '3', 'loupan/statics/images/ximg2.jpg');
 INSERT INTO `images` VALUES ('12', '3', '1', 'loupan/statics/images/ximg2.jpg');
