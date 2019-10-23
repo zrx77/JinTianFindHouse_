@@ -1,15 +1,12 @@
 package cn.jintian.dao.impl;
 
+import cn.jintian.dao.BaseDao;
+import cn.jintian.dao.ISecondNewHouseDao;
+import cn.jintian.pojo.SecondNew_h;
+
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.List;
-
-import cn.jintian.dao.ISecondNewHouseDao;
-import cn.jintian.dao.BaseDao;
-import cn.jintian.pojo.SecondNew_h;
-import cn.jintian.util.SecondHouse;
 
 public class GetSecondNewHouseDaoImpl implements ISecondNewHouseDao {
 	@Override

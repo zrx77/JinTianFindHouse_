@@ -1,8 +1,5 @@
 package cn.jintian.pojo;
 
-import java.util.List;
-import java.util.ListIterator;
-
 public class SecondNew_h {
     private Integer new_h_id;
     private Integer h_house_id;
